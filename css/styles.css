@@ -7,19 +7,17 @@ body {
     background-color: #10131c;
 }
 
-h1, h2 {
-    color: white;
-}
-
 h1 {
     margin-top: 30;
     font-size: 36px;
+    color: white;
 }
 
 h2 {
     font-size: 24px;
     border-bottom: 3px solid #383c47;
     padding-bottom: 5px;
+    color: white;
 }
 
 hr {
@@ -29,17 +27,55 @@ hr {
     background-color: #383c47;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-text {
+    margin-right: 20px;
+}
+
 .section {
     margin-bottom: 20px;
     background-color: #262a35;
     padding: 20px;
     border-radius: 20px;
     color: white;
+    position: relative;
 }
 
 .section p {
     margin: 5px 0;
 }
+
+.contact-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    gap: 20px; /* отступ */
+}
+
+.contact-info .info-container {
+    width: 100%;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-photo {
+    padding-top: 20px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
 
 a {
     color: #fff;
@@ -61,4 +97,11 @@ ul {
 
 ul li {
     margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .contact-info{
+        flex-direction: column;
+    }
 }
