@@ -1,107 +1,259 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6E6D8F;
+    max-width: 1000px;
     margin: 0 auto;
-    max-width: 800px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #10131c;
-}
-
-h1 {
-    margin-top: 30;
-    font-size: 36px;
-    color: white;
-}
-
-h2 {
-    font-size: 24px;
-    border-bottom: 3px solid #383c47;
-    padding-bottom: 5px;
-    color: white;
-}
-
-hr {
-    margin-top: 25px;
-    border: none;
-    height: 3px;
-    background-color: #383c47;
-}
-
-.header {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-.header-text {
-    margin-right: 20px;
-}
-
-.section {
-    margin-bottom: 20px;
-    background-color: #262a35;
-    padding: 20px;
-    border-radius: 20px;
-    color: white;
-    position: relative;
-}
-
-.section p {
-    margin: 5px 0;
-}
-
-.contact-info{
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 20px;
-    gap: 20px; /* отступ */
-}
-
-.contact-info .info-container {
+.top-block {
     width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 2vw;
+    padding-top: 4vw;
+    padding-bottom: 0.5vh;
 }
 
-.contact-text {
-    flex: 1;
+.profile-img {
+    max-width: 160px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.contact-photo {
-    padding-top: 20px;
-}
-
-.profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 18px;
+.profile-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-
-a {
-    color: #fff;
-    text-decoration: none;
-    background-color: #383c47;
-    padding: 10px 20px;
-    border-radius: 25px;
-    display: inline-block;
-    margin-top: 10px;
+.content, .left-block, .right-block {
+    width: 100%;
+    box-sizing: border-box;
 }
 
-a:hover {
-    background-color: #33373f;
+.content {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;    
+    min-height: 82vh;
+}
+
+.left-block,
+.right-block {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 0px;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.left-block {
+    width: 40%;
+}
+
+.right-block {
+    width: 60%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+    .top-block {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .left-block, .right-block {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.box-1 {
+    margin-bottom: 7vh;
+}
+
+.box-1 a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+}
+
+.box-1 a:hover {
+    color: #5a41c7;
+}
+
+p, h1, h2, h3, .text, .bold-text {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+p, h1, h2, h3 {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+    color: #3A395D;
+    margin-left: 4vh;
+}
+
+h2 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #3A395D;
+}
+
+h3 {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #7051EF;
 }
 
 ul {
-    padding-left: 20px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 ul li {
-    margin-bottom: 5px;
+    position: relative;
+    padding-left: clamp(1.5vw, 20px, 36px);
+    margin-bottom: 2.5vh;
 }
 
+.list-style-1 {
+    position: relative;
+    z-index: 0;
+}
 
-@media screen and (max-width: 600px) {
-    .contact-info{
-        flex-direction: column;
+.list-style-1 li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1vh;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #7051EF;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.list-style-1::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 12px;
+    z-index: -1;
+    height: 94%;
+    width: 2px;
+    background: #D1D1DE;
+}
+
+.list-style-2 li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1vh;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #7051EF;
+}
+
+hr {
+    width: 90%;
+    border: none;
+    border-top: 2px solid #E5E5EA;
+}
+
+.text {
+    line-height: 1.7;
+}
+
+.bold-text {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    color: #3A395D;
+}
+
+.highlight {
+    color: #7051EF;
+}
+
+.icon-img {
+    width: 16px;
+    height: auto;
+    vertical-align: -0.4vh;
+    margin-right: 1vw;
+    filter: brightness(0) saturate(100%) invert(39%) sepia(55%) saturate(7055%) hue-rotate(237deg) brightness(95%) contrast(89%);
+}
+
+.link-img {
+    width: 16px;
+    height: auto;
+    vertical-align: -0.4vh;
+    margin-right: 0.5vw;
+    filter: brightness(0) saturate(100%) invert(6%) sepia(47%) saturate(1534%) hue-rotate(214deg) brightness(90%) contrast(90%);
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 1em;
+    padding-bottom: 3vw;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #7051EF;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;   
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #5a41c7;
+}
+
+@media (max-width: 700px) {
+    .download-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
     }
 }

@@ -1,89 +1,107 @@
-<html lang="ru"></html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resume</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>My resume</title>
 </head>
 <body>
-    <h1>Артём, Backend-разработчик, 21 год</h1>
+    <div class="top-block">
+        <div class="profile-img">
+            <img src="img/profile.jpg">
+        </div>
 
-    <div class="section contact-info">
-        <div class="info-container">
-            <h2>Контактная информация</h2>
-            <div class="contact-text">
-                <p>
-                    Почта: <a href="mailto:hachukavun@gmail.com">hachukavun@gmail.com</a><br>
-                    Телеграм: <a href="https://t.me/kamenurini">t.me/kamenurini</a>
-                </p>
+        <div>
+            <h1>Артем Морозов</h1>
+            <h1><span class="highlight">Backend</span>-разработчик</h1>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="files/resume.pdf" download class="download-button">Скачать резюме (.pdf)</a>
+    </div>
+
+    <div class="content">
+        <div class="left-block">
+            <div class="box-1">
+                <h2>контакты</h2>
+                <a href="mailto:hachukavun@gmail.com">
+                    <p><img src="icons/email.png" alt="email" class="icon-img margin">hachukavun@gmail.com</p>
+                </a>
+                <p><img src="icons/call.png" alt="call" class="icon-img">+7(937) 428 3505</p>
+                <a href="https://t.me/kamenurini" target="_blank">
+                    <p><img src="icons/telegram.png" alt="telegram" class="icon-img">t.me/kamenurini</p>
+                </a>
+            </div>
+
+            <div class="box-1">
+                <h2>github</h2>
+                <a href="https://github.com/kavunpulemet">
+                    <p class="p1">github.com/kavunpulemet</p>
+                </a>
+            </div>
+
+            <div class="box-1">
+                <h2>навыки</h2>
+                <ul class="list-style-1">
+                    <li>golang</li>
+                    <li>gorilla/mux, zap, logrus, viper,<br> 
+                        sqlx, mongo driver, redis client</li>
+                    <li>postgresql, ms sql,<br>
+                        mongodb, redis</li>
+                    <li>testing, testify</li>
+                    <li>docker, docker compose</li>
+                    <li>git</li>
+                    <li>swagger</li>
+                    <li>C# (asp.net, ef, dapper)</li>
+                </ul>
             </div>
         </div>
-        <div class="contact-photo">
-            <img src="images/a.jpg" alt="ыыыы" class="profile-photo">
+        
+        <div class="right-block">
+            <div class="box-1">
+                <h2>обо мне</h2>
+                <p class="text">Занимаюсь backend-разработкой на Go чуть больше года. За это время написал несколько пет-проектов, 
+                    в которых применял различные технологии. В настоящее время погружаюсь в микросервисную архитектуру и gRPC.</p>
+                <hr>
+            </div>
+
+            <div class="box-1">
+                <h2>проекты</h2>
+                <div class="box-1">
+                    <h3>To-do менеджер</h3>
+                    <p class="bold-text">приложение для управления задачами с возможностью аутентификации, создания и хранения списков и их задач</p>
+                    <ul class="list-style-2">
+                        <li>rest api</li>
+                        <li>postgresql, sql-запросы, миграции базы данных</li>
+                        <li>jwt</li>
+                        <li>docker, docker compose</li>
+                    </ul>
+                    <a href="https://github.com/kavunpulemet/go-rest">
+                        <p class="bold-text"><img src="icons/link.png" alt="link" class="link-img">github</p>
+                    </a>
+                </div>
+
+                <div class="box-1">
+                    <h3>Клуб нумизматов</h3>
+                    <p class="bold-text">приложение для хранения данных о коллекционных монетах с поддержкой кэширования и документированием API</p>
+                    <ul class="list-style-2">
+                        <li>rest api</li>
+                        <li>mongodb, redis</li>
+                        <li>testing (тесты кэширования)</li>
+                        <li>swagger</li>
+                        <li>docker, docker compose</li>
+                    </ul>
+                    <a href="https://github.com/kavunpulemet/numismatic-service">
+                        <p class="bold-text"><img src="icons/link.png" alt="link" class="link-img">github</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="section">
-        <h2>Обо мне</h2>
-        <p>Я занимаюсь backend-разработкой на Go чуть больше года. За это время написал несколько пет-проектов, в которых применял различные технологии.</p>
-    </div>
-
-    <div class="section">
-        <h2>Навыки и технологии</h2>
-        <ul>
-            <li>Разработал несколько пет-проектов с использованием REST API</li>
-            <li>Использую библиотеки: Gorilla Mux (маршрутизация), Zap и Logrus (логирование), Viper (управление конфигурацией), sqlx, Mongo Driver и Redis Client (работа с бд)</li>
-            <li>Пишу Unit-тесты на стандартной библиотеке и с использованием Testify</li>
-            <li>Использую Git для контроля версий</li>
-            <li>Изучаю gRPC и погружаюсь в микросервисную архитектуру</li>
-            <li>Docker и Docker Compose для управления окружением</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Работа с базами данных</h2>
-        <ul>
-            <li>SQL: PostgreSQL, MS SQL</li>
-            <li>NoSQL: MongoDB, Redis</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Опыт с C#</h2>
-        <ul>
-            <li>ASP.NET</li>
-            <li>ORM: Entity Framework, Dapper</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Пет-проекты на Go</h2>
-
-        <div>
-            <h3>To-do менеджер (PostgreSQL, JWT, Docker)</h3>
-            <p>
-                Пет-проект, разработанный с использованием REST API и PostgreSQL в качестве базы данных. 
-                Реализована аутентификация пользователей с помощью JWT, а также создание списков задач и их элементов, которые хранятся в базе данных. 
-                Написал миграции для управления структурой базы данных, а также SQL-запросы для работы с данными. 
-                Описал Docker-файл с необходимыми параметрами для контейниризации приложения 
-                и с помощью Docker Compose реализовал развертывание приложения и базы данных в контейнерах.
-            </p>
-            <p><a href="https://github.com/kavunpulemet/go-rest">Ссылка на проект</a></p>
-        </div>
-
-        <hr>
-
-        <div>
-            <h3>Клуб нумизматов (MongoDB, Redis, Swagger, Testing, Docker)</h3>
-            <p>
-                Приложение для хранения информации о коллекционных монетах, с использованием MongoDB в качестве основной базы данных и Redis для кэширования. 
-                Написал тесты для проверки корректности работы кэша, а также интегрировал Swagger для документирования и тестирования API. 
-                Также описал Docker-файл с необходимыми параметрами для контейниризации приложения 
-                и с помощью Docker Compose реализовал развертывание приложения, MongoDB и Redis в контейнерах.
-            </p>
-            <p><a href="https://github.com/kavunpulemet/numismatic-service">Ссылка на проект</a></p>
-        </div>
-    </div>
-
 </body>
 </html>
