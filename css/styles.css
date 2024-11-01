@@ -94,7 +94,7 @@ body {
 }
 
 .box-1 {
-    margin-bottom: 7vh;
+    margin-bottom: 3vw;
 }
 
 .box-1 a {
@@ -116,6 +116,10 @@ p, h1, h2, h3, .text, .bold-text {
 
 p, h1, h2, h3 {
     max-width: 100%;
+}
+
+p {
+    margin-top: 0px;
 }
 
 h1 {
