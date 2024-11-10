@@ -60,9 +60,8 @@ body {
 .right-block {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
     margin-right: 0px;
-    border-radius: 8px;
+    border-radius: 25px;
     box-sizing: border-box;
 }
 
