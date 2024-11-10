@@ -72,6 +72,7 @@ body {
 
 .right-block {
     width: 60%;
+    padding-left: 50px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -90,6 +91,9 @@ body {
     .left-block, .right-block {
         width: 100%;
         height: auto;
+    }
+    .right-block {
+        padding-left: 20px;
     }
 }
 
@@ -167,7 +171,7 @@ ul li {
     content: "";
     position: absolute;
     left: 0;
-    top: 1vh;
+    top: 8px;
     width: 5px;
     height: 5px;
     border: 2px solid #525CEB;
@@ -190,7 +194,7 @@ ul li {
     content: "";
     position: absolute;
     left: 0;
-    top: 1vh;
+    top: 8px;
     width: 5px;
     height: 5px;
     border-radius: 50%;
