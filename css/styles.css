@@ -7,7 +7,6 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -19,7 +18,7 @@ body {
     flex-direction: row;
     align-items: center;
     box-sizing: border-box;
-    padding-left: 2vw;
+    /*padding-left: 0.5vw;*/
     padding-top: 4vw;
     padding-bottom: 0.5vh;
 }
@@ -237,9 +236,10 @@ hr {
 }
 
 .button-container {
-    text-align: center;
+    text-align: left;
     margin-top: 1em;
     padding-bottom: 3vw;
+    padding-left: 30px;
 }
 
 .download-button {
@@ -259,6 +259,11 @@ hr {
 }
 
 @media (max-width: 700px) {
+    .button-container {
+        text-align: center;
+        padding-left: 0px;
+    }
+
     .download-button {
         font-size: 0.9rem;
         padding: 8px 15px;
